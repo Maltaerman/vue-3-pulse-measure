@@ -1,0 +1,12 @@
+:root {
+  --toolbarHeight: 80px;
+  --zIndexCookieBannerLink: 200;
+}
+
+.--screenHeight {
+  height: calc(100vh - var(--toolbarHeight));
+}
+
+.--screenMinHeight {
+  min-height: calc(100vh - var(--toolbarHeight));
+}
