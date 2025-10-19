@@ -42,7 +42,7 @@ const bpm = ref(0);
 const torchAvailable = ref(false);
 const manualTorchOn = ref(false);
 let stream, intervalId;
--
+
 let signal = [];
 let timestamps = [];
 
