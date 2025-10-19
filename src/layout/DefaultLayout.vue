@@ -15,7 +15,7 @@ const isCookieBannerShown = ref(false);
     </main>
 
 
-    <ToolBar />
+    <ToolBar class="fixed bottom-0 bg-amber-700" />
 
     <CookieBanner v-if="isCookieBannerShown" />
   </div>
