@@ -3,8 +3,8 @@ import { ref, watchEffect, markRaw } from 'vue';
 import { useRoute } from 'vue-router';
 
 export const LAYOUT_ENUM = {
-  DEFAULT: 'default',
-  EMPTY: 'empty',
+  DEFAULT: 'Default',
+  EMPTY: 'Empty',
 };
 
 type LayoutComponent = ReturnType<typeof markRaw>;
