@@ -90,21 +90,23 @@ onBeforeUnmount(() =>
 <template>
   <nav
     ref="containerRef"
-    class="relative -mb-3 overflow-scroll pb-3"
+    class="relative overflow-scroll"
   >
     <ul
-      class="relative flex w-full flex-row gap-1"
+      class="relative flex size-full flex-row gap-1 divide-x divide-neutral-100"
     >
       <li
         v-for="({ id, label }, index) in props.tabs"
         :id="id"
         :key="id"
         ref="tabRefs"
+        class="size-full text-center"
       >
         <BaseTab
           :is-active="tabId === id"
           :size="props.size"
           :theme="props.theme"
+          class="size-full"
           @set-tab="onChangeTab(id, index)"
         >
           {{ label }}

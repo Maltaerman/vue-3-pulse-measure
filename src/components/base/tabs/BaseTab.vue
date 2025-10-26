@@ -30,7 +30,7 @@ const emit = defineEmits(['set-tab']);
   <component
     :is="props.tag"
     class="flex items-center justify-center gap-1 rounded-8 px-3
-      font-bold transition-colors duration-300 can-hover:cursor-pointer"
+      font-medium text-neutral-100 transition-colors duration-300 can-hover:cursor-pointer"
     @click="emit('set-tab')"
   >
     <span class="truncate translate-z-0">
