@@ -1,0 +1,17 @@
+.transition-fade-enter-active {
+  @apply transition-opacity duration-300 ease-in;
+}
+
+.transition-fade-leave-active {
+  @apply transition-opacity duration-300 ease-in-out;
+}
+
+.transition-fade-enter-from,
+.transition-fade-leave-to {
+  @apply opacity-0;
+}
+
+.transition-fade-enter-to,
+.transition-fade-leave-from {
+  @apply opacity-100;
+}
