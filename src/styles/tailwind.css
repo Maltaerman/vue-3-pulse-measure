@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  /* BASE */
+  --color-light: oklch(1 0 0); /* White: 255 255 255 */
+  --color-dark: oklch(0 0 0); /* Black: 0 0 0 */
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  /* PRIMARY */
+  --color-primary-front-select: oklch(1 0 0); /* White: 255 255 255 */
+  --color-primary-400: oklch(0.75 0.15 20); /* Approx for 235 109 66 (orange), convert exactly */
+  --color-primary-500: oklch(0.70 0.18 18); /* Approx for 232 90 41 (darker orange), convert exactly */
+  --color-primary-600: oklch(0.65 0.20 16); /* Approx for 226 76 24 (deeper orange), convert exactly */
+
+  /* NEUTRAL */
+  --color-neutral-100: oklch(1 0 0); /* White: 255 255 255 */
+  --color-neutral-200: oklch(0.75 0.05 240); /* Approx for 171 190 222 (light blue-gray), convert exactly */
+  --color-neutral-300: oklch(0.50 0.10 260); /* Approx for 57 89 142 (blue), convert exactly */
+  --color-neutral-400: oklch(0.45 0.10 260); /* Approx for 45 71 113 (darker blue), convert exactly */
+  --color-neutral-500: oklch(0.40 0.10 260); /* Approx for 39 62 99 (darker blue), convert exactly */
+  --color-neutral-600: oklch(0.35 0.10 260); /* Approx for 33 53 84 (darker blue), convert exactly */
+  --color-neutral-700: oklch(0.30 0.10 260); /* Approx for 27 44 70 (darker blue), convert exactly */
+  --color-neutral-800: oklch(0.25 0.10 260); /* Approx for 21 34 54 (darker blue), convert exactly */
+  --color-neutral-900: oklch(0.20 0.10 260); /* Approx for 20 28 46 (near black), convert exactly */
+  --color-neutral-950: oklch(0.15 0.05 260); /* Approx for 17 24 39 (near black), convert exactly */
+  --color-neutral-100-8: oklch(1 0 0 / 0.08); /* White with opacity */
+  --color-neutral-100-10: oklch(1 0 0 / 0.1); /* White with opacity */
+  --color-neutral-100-50: oklch(1 0 0 / 0.5); /* White with opacity */
+  --color-neutral-950-90: oklch(0.15 0.05 260 / 0.9); /* Approx for 17 24 39 with opacity, convert exactly */
+
+  /* ACCENT */
+  --color-accent-red: oklch(0.80 0.15 29); /* Already oklch, adjusted for clarity */
+  --color-accent-orange: oklch(0.75 0.20 40); /* Approx for 255 84 0 (bright orange), convert exactly */
+  --color-accent-yellow: oklch(0.85 0.15 80); /* Approx for 255 175 19 (yellow), convert exactly */
+  --color-accent-green: oklch(0.70 0.15 140); /* Approx for 62 184 20 (green), convert exactly */
+  --color-accent-blue: oklch(0.50 0.20 260); /* Approx for 41 75 204 (blue), convert exactly */
+  --color-accent-pink: oklch(0.70 0.15 340); /* Approx for 221 23 107 (pink), convert exactly */
+  --color-accent-violet: oklch(0.60 0.20 300); /* Approx for 111 28 217 (violet), convert exactly */
+  --color-accent-grey: oklch(0.40 0.10 260); /* Approx for 39 62 99 (grey), convert exactly */
+}
+
+[data-theme="dark"] {
+  /* BASE */
+  --color-light: oklch(0 0 0); /* Black: 0 0 0 */
+  --color-dark: oklch(1 0 0); /* White: 255 255 255 */
+
+  /* PRIMARY */
+  --color-primary-front-select: oklch(0 0 0); /* Black: 0 0 0 */
+  --color-primary-400: oklch(0.70 0.18 20); /* Approx for 235 80 50 (darker orange), convert exactly */
+  --color-primary-500: oklch(0.65 0.20 18); /* Approx for 220 70 30 (darker orange), convert exactly */
+  --color-primary-600: oklch(0.60 0.22 16); /* Approx for 200 60 20 (deeper orange), convert exactly */
+
+  /* NEUTRAL */
+  --color-neutral-100: oklch(0.15 0.05 260); /* Already oklch, matches 17 24 39 */
+  --color-neutral-200: oklch(0.35 0.10 260); /* Approx for 33 53 84, convert exactly */
+  --color-neutral-300: oklch(0.40 0.10 260); /* Approx for 39 62 99, convert exactly */
+  --color-neutral-400: oklch(0.45 0.10 260); /* Approx for 45 71 113, convert exactly */
+  --color-neutral-500: oklch(0.50 0.10 260); /* Approx for 57 89 142, convert exactly */
+  --color-neutral-600: oklch(0.75 0.05 240); /* Approx for 171 190 222, convert exactly */
+  --color-neutral-700: oklch(1 0 0); /* White: 255 255 255 */
+  --color-neutral-800: oklch(1 0 0); /* White: 255 255 255 */
+  --color-neutral-900: oklch(1 0 0); /* White: 255 255 255 */
+  --color-neutral-950: oklch(1 0 0); /* White: 255 255 255 */
+  --color-neutral-100-8: oklch(0.15 0.05 260 / 0.08); /* Matches 17 24 39 with opacity */
+  --color-neutral-100-10: oklch(0.15 0.05 260 / 0.1); /* Matches 17 24 39 with opacity */
+  --color-neutral-100-50: oklch(0.15 0.05 260 / 0.5); /* Matches 17 24 39 with opacity */
+  --color-neutral-950-90: oklch(1 0 0 / 0.9); /* White with opacity */
+
+  /* ACCENT */
+  --color-accent-red: oklch(0.75 0.20 40); /* Already oklch, adjusted to match orange */
+  --color-accent-orange: oklch(0.75 0.20 40); /* Approx for 255 84 0, convert exactly */
+  --color-accent-yellow: oklch(0.85 0.15 80); /* Approx for 255 175 19, convert exactly */
+  --color-accent-green: oklch(0.70 0.15 140); /* Approx for 62 184 20, convert exactly */
+  --color-accent-blue: oklch(0.50 0.20 260); /* Approx for 41 75 204, convert exactly */
+  --color-accent-pink: oklch(0.70 0.15 340); /* Approx for 221 23 107, convert exactly */
+  --color-accent-violet: oklch(0.60 0.20 300); /* Approx for 111 28 217, convert exactly */
+  --color-accent-grey: oklch(0.40 0.10 260); /* Approx for 39 62 99, convert exactly */
+}

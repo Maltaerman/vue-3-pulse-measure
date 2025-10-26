@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
+
+import BaseThemeToggle from '@/components/base/BaseThemeToggle.vue'
 
 import ToolBar from '@/components/layout/ToolBar.vue';
 import CookieBanner from '@/components/layout/CookieBanner.vue';
@@ -10,8 +12,10 @@ const isCookieBannerShown = ref(false);
 
 <template>
   <div>
-    <main class="relative flex size-full flex-1 flex-col --screenMinHeight">
+    <main class="relative flex size-full flex-1 flex-col --screenMinHeight bg-neutral-100 transition-colors duration-300">
       <slot />
+
+      <BaseThemeToggle />
     </main>
 
 
