@@ -17,6 +17,7 @@ export default defineConfig({
     tailwindcss(),
     mkcert(),
   ],
+
   server: {
     host: '0.0.0.0',
     https: true,
@@ -26,5 +27,23 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
+  },
+
+  test: {
+    globals: true,
+
+    environment: 'jsdom',
+
+    reporters: 'dot',
+
+    deps: {
+      inline: ['vue2', '@vue/composition-api', 'vue-demi', '@vueuse/core'],
+    },
+
+    coverage: {
+      provider: 'v8',
+    },
+
+    pool: 'vmThreads',
   },
 })
